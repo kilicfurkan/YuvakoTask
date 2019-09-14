@@ -20,8 +20,8 @@ export default () => {
         </View>
         <Text style={styles.price}>€165.000</Text>
       </View>
-      <Property />
-      <Property />
+      <Property detail="{Status} | For {Selling Type} | {Property Type}" />
+      <Property detail="Heating: {Heating Option}" />
       {!expand ? 
         <SystemButton title="Show More Details" onPressButton={() => setExpand(!expand)} /> :
         null
@@ -30,12 +30,15 @@ export default () => {
         <View>
           <SystemButton title="Edit Property Details" />
           <PropertyDetail />
-          <Property />
-          <Property />
-          <Property />
-          <Property />
-          <Property />
-          <Property />
+          <Property detail="In Sıte: Yes | No" />
+          <Property detail="Furnished: Yes | No" />
+          <Property detail="Loan Status: Yes | No" />
+          <Property detail="Min Carpet Area: {MinCarpetArea}" />
+          <Property detail="View Side: {Selection1}, {Selection2}..." />
+          <Property detail="Max Maintenance Fee: {XYZ} {Currency}" />
+          <Property detail="Swap Status: Yes | No" />
+          <Property detail="Indoor Features: [Selected Feature Name]" />
+          <Property detail="Outdoor Features: [Selected Feature Name]" />
           <SystemButton title="Show Less Details" onPressButton={() => setExpand(!expand)} />
         </View> :
         null
